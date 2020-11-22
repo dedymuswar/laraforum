@@ -26,6 +26,7 @@
     "dependencies": {
         "tailwindcss": "^1.9.6",
         "vue-router": "^3.4.8",
-        "vue-simplemde": "^1.1.2"
+        "vue-simplemde": "^1.1.2",
+        "vue-sweetalert2": "^4.1.1"
     }
 }

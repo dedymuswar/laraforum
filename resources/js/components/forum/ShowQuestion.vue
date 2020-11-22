@@ -1,11 +1,11 @@
 <template>
-  <div class="bg-white p-4 rounded">
+  <div class="bg-white p-4 rounded border-red-300 border-t-4">
     <div class="header mb-4">
       <div class="flex justify-between">
         <h3 class="text-3xl subpixel-antialiased text-gray-700">
           {{ data.title }}
         </h3>
-        <button class="btn btn-teal">12 Replies</button>
+        <button class="btn btn-teal">{{data.reply_count}} Replies</button>
       </div>
       <div class="text-gray-700 font-sans antialiased text-xs leading-normal">
         {{ data.user }} said

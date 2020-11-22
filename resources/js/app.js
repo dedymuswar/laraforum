@@ -15,10 +15,17 @@ window.User = User
 
 // Vue Simple MDE
 import Vue from 'vue'
-// import VueSimpleMde from 'vue-simplemde'
-// Vue.use(VueSimpleMde)
-
+import VueSimpleMde from 'vue-simplemde'
+import 'simplemde/dist/simplemde.min.css'
+Vue.use(VueSimpleMde)
 window.EventBus = new Vue();
+
+import VueSweetalert2 from 'vue-sweetalert2';
+ 
+// If you don't need the styles, do not connect
+import 'sweetalert2/dist/sweetalert2.min.css';
+ 
+Vue.use(VueSweetalert2);
 
 // import md from 'marked';
 // window.md = md
@@ -35,6 +42,7 @@ window.EventBus = new Vue();
 
 Vue.component('AppHome', require('./components/AppHome.vue').default);
 Vue.component('Toolbar', require('./components/Toolbar.vue'));
+Vue.component('VueSimplemde', VueSimpleMde);
 // Vue.component('Footer', require('./components/AppFooter.vue'));
 /**
  * Next, we will create a fresh Vue application instance and attach it to

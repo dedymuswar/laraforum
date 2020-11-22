@@ -50,7 +50,7 @@ export default {
          itemsMenu : [
            {'title' : 'Forum', to:'/forum', show:true},
            {'title' : 'Ask Question', to:'/create', show: User.loggedIn()},
-           {'title' : 'Category', to:'/ask', show: User.loggedIn()},
+           {'title' : 'Category', to:'/category', show: User.admin()},
            
          ],
          itemsAuth:[

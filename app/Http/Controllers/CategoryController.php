@@ -52,10 +52,10 @@ class CategoryController extends Controller
         // Category::create($request->all())
         $category = new Category;
         $category->name = $request->name;
-        $category->slug = Str::slug($request->slug);
+        $category->slug = Str::slug($request->name);
         $category->save();
 
-        return response('created', Response::HTTP_CREATED);
+        return response($category, Response::HTTP_CREATED);
     }
 
     /**
@@ -94,7 +94,7 @@ class CategoryController extends Controller
             'slug' => Str::slug($request->slug)
         ]);
 
-        return response('Updated', Response::HTTP_ACCEPTED);
+        return response(new CategoryResource($category), Response::HTTP_ACCEPTED);
     }
 
     /**

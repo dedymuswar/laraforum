@@ -53,10 +53,10 @@ export default {
   methods: {
     update() {
       axios.patch(`/api/question/${this.form.slug}`, this.form)
-      .then(res => this.cancel())
+      .then(res => this.cancel(this.data))
     },
-    cancel() {
-      EventBus.$emit("cancelEditing")
+    cancel(hasil) {
+      EventBus.$emit("cancelEditing",hasil)
     },
   },
   mounted() {
